@@ -56,7 +56,7 @@ UUID=ABCDEFGH-1234-5678-IJK-LMNOPQRSTUV       /home    btrfs	subvol=@home,defaul
 
 nano /etc/mkinitcpio.conf
 
-Remove fsck on HOOK
+_Remove fsck on HOOK_
 
 mkinitcpio -p linux
 
@@ -75,7 +75,7 @@ locale-gen
 
 nano /etc/locale.conf
 
-// LANG=ab_CD.UTF-8
+_LANG=ab_CD.UTF-8_
 
 echo hostname > /etc/hostname
 
@@ -83,11 +83,11 @@ touch /etc/hosts
 
 nano /etc/hosts
 
-//127.0.0.1	localhost
+_127.0.0.1	localhost_
 
-// ::1		localhost
+_::1		localhost_
 
-// 127.0.1.1	hostname
+_127.0.1.1	hostname_
 
 passwd
 
