@@ -30,7 +30,7 @@ btrfs subvolume create @
 
 btrfs subvolume create @home
 
-btrfs subvolume create snapshots
+btrfs subvolume create @snapshots
 
 cd
 
