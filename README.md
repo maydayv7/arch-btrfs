@@ -1,19 +1,19 @@
 # Arch Linux BTRFS Install on BIOS/MBR/CSM
-This is basically how I install my arch, with the B-Tree File System. 
+This is basically how I install my arch, with the B-Tree File System. This config is also compatible with Timeshift. 
 I'm open to feedback and suggestions for improvements.
 
 Enter custom values for CAPITALIZED LETTERS
 
-_Italicized letters_ are comments
+_==Italicized letters==_ are comments
 
 ### Network
 iwctl
 
 device list
 
-station _DEVICE_ get-networks
+station DEVICE get-networks
 
-station _DEVICE_ connect _NETWORK_
+station DEVICE connect NETWORK
 
 exit
 
@@ -53,15 +53,15 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 nano /mnt/etc/fstab
 
-_Remove subvolids, set noatime. Eg:_
+_==Remove subvolids, set noatime. Eg:==_
 
-UUID=ABCDEFGH-1234-5678-IJK-LMNOPQRSTUV       /     btrfs     subvol=@,defaults,noatime,space_cache	0 1
+_==UUID=ABCDEFGH-1234-5678-IJK-LMNOPQRSTUV       /     btrfs     subvol=@,defaults,noatime,space_cache	0 1==_
 
-UUID=ABCDEFGH-1234-5678-IJK-LMNOPQRSTUV       /home    btrfs	subvol=@home,defaults,noatime,space_cache	0 2
+_==UUID=ABCDEFGH-1234-5678-IJK-LMNOPQRSTUV       /home    btrfs	subvol=@home,defaults,noatime,space_cache	0 2==_
 
-nano /etc/mkinitcpio.conf
+nano /mnt/etc/mkinitcpio.conf
 
-_Remove fsck on HOOK_
+_==Remove fsck on HOOK==_
 
 mkinitcpio -p linux
 
@@ -74,13 +74,13 @@ timedatectl set-timezone Asia/Kolkata
 
 nano /etc/locale.gen
 
-_Uncomment the required locale_
+==_Uncomment the required locale_==
 
 locale-gen
 
 nano /etc/locale.conf
 
-_LANG=ab_CD.UTF-8_
+==_LANG=ab_CD.UTF-8_==
 
 echo hostname > /etc/hostname
 
@@ -88,11 +88,11 @@ touch /etc/hosts
 
 nano /etc/hosts
 
-_127.0.0.1	localhost_
+==_127.0.0.1	localhost_==
 
-_::1		localhost_
+==_::1		localhost_==
 
-_127.0.1.1	hostname_
+==_127.0.1.1	hostname_==
 
 passwd
 
@@ -116,9 +116,13 @@ systemctl start gdm.service
 
 systemctl enable gdm.service
 
+### Miscellanous
+pacman -S bluez bluez-utils cups
+
 systemctl enable NetworkManager.service
 
-### Miscellanous
+systemctl enable bluetooth.service
+
 exit
 
 shutdown now
