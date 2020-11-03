@@ -1,5 +1,10 @@
 # Arch Linux BTRFS Install on BIOS/MBR/CSM
-Enter custom values for capitalised letters
+This is basically how I install my arch, with the B-Tree File System. 
+I'm open to feedback and suggestions for improvements.
+
+Enter custom values for CAPITALIZED LETTERS
+
+_Italicized letters_ are comments
 
 ### Network
 iwctl
