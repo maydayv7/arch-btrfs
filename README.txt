@@ -1,8 +1,9 @@
 Arch Linux GNOME-BTRFS Install on BIOS/MBR/CSM
 This is basically how I install my Arch. This config is compatible with Timeshift. Please reach out to me for doubts or suggestions
 
-Enter custom values for CAPITALIZED letters
 <These> letters are comments
+[These] letters are sub-headings
+Enter custom values for CAPITALIZED letters
 
 [Network]
 iwctl
@@ -49,22 +50,24 @@ nano /etc/locale.gen
 <Uncomment the required locale>
 locale-gen
 nano /etc/locale.conf
-<LANG=ab_CD.UTF-8>
+<Add: 
+LANG=ab_CD.UTF-8>
 
 echo hostname > /etc/hostname
 touch /etc/hosts
 nano /etc/hosts
 <Add:
-  127.0.0.1	localhost
-  ::1		localhost
-  127.0.1.1	hostname>
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	hostname>
 
 passwd
 useradd -m USER
 passwd USER
 export EDITOR=nano
 visudo
-==Add USER ALL=(ALL) ALL==
+<Add: 
+USER ALL=(ALL) ALL>
 
 [Bootloader]
 pacman -S grub
@@ -78,23 +81,23 @@ systemctl start gdm.service
 systemctl enable gdm.service
 
 [Miscellanous]
-==Essential Utilites==
+<Essential Utilites>
 pacman -S bluez bluez-utils cups git ntfs-3g
 systemctl enable NetworkManager.service
 systemctl enable bluetooth.service
 
-==Installing yay aur-helper (Optional)==
+<Installing yay aur-helper (Optional)>
 cd /opt
 git clone https://aur.archlinux.org/yay-git.git
 chown -R USER:USER ./yay-git
 cd yay-git
 makepkg -si
 
-==Essential Apps (Optional)==
+<Essential Apps (Optional)>
 yay -S pamac-aur google-chrome
 pacman -S freeoffice gparted geary gedit neofetch vlc p7zip p7zip-plugins unrar tar
 
-==We're Done! :)==
+<We're Done! :)>
 exit
 reboot
 
