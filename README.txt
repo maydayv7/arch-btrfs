@@ -1,6 +1,8 @@
-{Arch Linux BTRFS Install on BIOS/MBR/CSM}
+Arch Linux GNOME-BTRFS Install on BIOS/MBR/CSM
+This is basically how I install my Arch. This config is compatible with Timeshift. Please reach out to me for doubts or suggestions
+
 Enter custom values for CAPITALIZED letters
-==These== letters are comments
+<These> letters are comments
 
 [Network]
 iwctl
@@ -27,33 +29,42 @@ mount /dev/sdaY /mnt/boot
 
 [Install Arch]
 pacstrap /mnt base linux linux-lts linux-firmware nano base-devel man-db man-pages texinfo
+
 genfstab -U /mnt >> /mnt/etc/fstab
 nano /mnt/etc/fstab
-==Remove subvolids, set noatime. Eg:==
-==UUID=ABCDEFGH-1234-5678-IJK-LMNOPQRSTUV / btrfs subvol=@,defaults,noatime,space_cache 0 1==
-==UUID=ABCDEFGH-1234-5678-IJK-LMNOPQRSTUV /home btrfs subvol=@home,defaults,noatime,space_cache 0 2==
+<Remove subvolids, set noatime. Eg:
+UUID=ABCDEFGH-1234-5678-IJK-LMNOPQRSTUV / btrfs subvol=@,defaults,noatime,space_cache 0 1
+UUID=ABCDEFGH-1234-5678-IJK-LMNOPQRSTUV /home btrfs subvol=@home,defaults,noatime,space_cache 0 2>
+
 nano /mnt/etc/mkinitcpio.conf
-==Remove fsck on HOOK==
+<Remove fsck on HOOK>
 mkinitcpio -p linux
 mkinitcpio -p linux-lts
 
 [General Settings]
 arch-chroot /mnt
 timedatectl set-timezone Asia/Kolkata
+
 nano /etc/locale.gen
-==Uncomment the required locale==
+<Uncomment the required locale>
 locale-gen
 nano /etc/locale.conf
-==LANG=ab_CD.UTF-8==
+<LANG=ab_CD.UTF-8>
+
 echo hostname > /etc/hostname
 touch /etc/hosts
 nano /etc/hosts
-==127.0.0.1	localhost==
-==::1		localhost==
-==127.0.1.1	hostname==
+<Add:
+  127.0.0.1	localhost
+  ::1		localhost
+  127.0.1.1	hostname>
+
 passwd
 useradd -m USER
 passwd USER
+export EDITOR=nano
+visudo
+==Add USER ALL=(ALL) ALL==
 
 [Bootloader]
 pacman -S grub
@@ -66,23 +77,23 @@ pacman -S gnome
 systemctl start gdm.service
 systemctl enable gdm.service
 
-[After Install]
+[Miscellanous]
 ==Essential Utilites==
 pacman -S bluez bluez-utils cups git ntfs-3g
 systemctl enable NetworkManager.service
 systemctl enable bluetooth.service
-export EDITOR=nano
-visudo
-==Add USER ALL=(ALL) ALL
+
 ==Installing yay aur-helper (Optional)==
 cd /opt
 git clone https://aur.archlinux.org/yay-git.git
 chown -R USER:USER ./yay-git
 cd yay-git
 makepkg -si
+
 ==Essential Apps (Optional)==
 yay -S pamac-aur google-chrome
 pacman -S freeoffice gparted geary gedit neofetch vlc p7zip p7zip-plugins unrar tar
+
 ==We're Done! :)==
 exit
 reboot
