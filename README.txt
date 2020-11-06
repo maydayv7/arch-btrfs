@@ -52,8 +52,8 @@ nano /etc/hosts
 ==::1		localhost==
 ==127.0.1.1	hostname==
 passwd
-useradd -m username
-passwd username
+useradd -m USER
+passwd USER
 
 [Bootloader]
 pacman -S grub
@@ -71,10 +71,13 @@ systemctl enable gdm.service
 pacman -S bluez bluez-utils cups git ntfs-3g
 systemctl enable NetworkManager.service
 systemctl enable bluetooth.service
-==Installing yay aur-helper==
+export EDITOR=nano
+visudo
+==Add USER ALL=(ALL) ALL
+==Installing yay aur-helper (Optional)==
 cd /opt
-sudo git clone https://aur.archlinux.org/yay-git.git
-sudo chown -R USER:USER ./yay-git
+git clone https://aur.archlinux.org/yay-git.git
+chown -R USER:USER ./yay-git
 cd yay-git
 makepkg -si
 ==Essential Apps (Optional)==
@@ -82,7 +85,7 @@ yay -S pamac-aur google-chrome
 pacman -S freeoffice gparted geary gedit neofetch vlc p7zip p7zip-plugins unrar tar
 ==We're Done! :)==
 exit
-shutdown now
+reboot
 
 [Links]
 https://github.com/egara/arch-btrfs-installation
