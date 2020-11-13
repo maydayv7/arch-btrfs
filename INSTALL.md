@@ -93,5 +93,7 @@ Enter custom values for CAPITALIZED letters
 
 ###Links
 https://github.com/egara/arch-btrfs-installation
+
 https://github.com/egara/buttermanager/wiki/Documentation
+
 https://wiki.archlinux.org/index.php/Installation_guide
