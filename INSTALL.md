@@ -150,7 +150,7 @@ Enter custom values for CAPITALIZED letters
 
 `reboot`
 
-###Links
+### Links
 https://github.com/egara/arch-btrfs-installation
 
 https://github.com/egara/buttermanager/wiki/Documentation
