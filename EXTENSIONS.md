@@ -48,4 +48,4 @@ Tweaks in System Menu
 Panel OSD
 
 ## Links:
-www.extensions.gnome.org
+https://extensions.gnome.org/
