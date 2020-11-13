@@ -7,5 +7,5 @@ See [INSTALL.md](https://github.com/maydayv7/arch-btrfs/blob/main/INSTALL.md) fo
 ## Apps
 See [APPS.md](https://github.com/maydayv7/arch-btrfs/blob/main/APPS.md) for the list essential apps that I always install.
 
-## GNOME Etensions
+## GNOME Extensions
 See [EXTENSIONS.md](https://github.com/maydayv7/arch-btrfs/blob/main/EXTENSIONS.md) for the list of favorite gnome-shell extensions.
