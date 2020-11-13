@@ -1,15 +1,15 @@
-#Arch Linux BTRFS Install on BIOS/MBR/CSM
+# Arch Linux BTRFS Install on BIOS/MBR/CSM
 Enter custom values for CAPITALIZED letters
 *These* letters are comments
 
-###Network
+### Network
 `iwctl`
 `device list`
 `station DEVICE get-networks`
 `station DEVICE connect NETWORK`
 `exit`
 
-###Partitions
+### Partitions
 `mkfs.btrfs -f -L Linux /dev/sdaX`
 `mkfs.ext4 /dev/sdaY`
 `mount /dev/sdaX /mnt`
@@ -25,7 +25,7 @@ Enter custom values for CAPITALIZED letters
 `mkdir /mnt/boot`
 `mount /dev/sdaY /mnt/boot`
 
-###Install Arch
+### Install Arch
 `pacstrap /mnt base linux linux-lts linux-firmware nano base-devel man-db man-pages texinfo`
 `genfstab -U /mnt >> /mnt/etc/fstab`
 
@@ -38,7 +38,7 @@ Enter custom values for CAPITALIZED letters
 *Remove fsck on HOOK*
 
 
-###General Settings
+### General Settings
 `arch-chroot /mnt`
 `mkinitcpio -p linux`
 `mkinitcpio -p linux-lts`
@@ -62,18 +62,18 @@ Enter custom values for CAPITALIZED letters
 `useradd -m USER`
 `passwd USER`
 
-###Bootloader
+### Bootloader
 `pacman -S grub`
 `grub-install /dev/sda`
 `grub-mkconfig -o /boot/grub/grub.cfg`
 
-###Desktop Environment
+### Desktop Environment
 `pacman -S xorg`
 `pacman -S gnome`
 `systemctl start gdm.service`
 `systemctl enable gdm.service`
 
-###After Install
+### After Install
 *Essential Utilites*
 `pacman -S bluez bluez-utils cups git ntfs-3g intel-ucode`
 `systemctl enable NetworkManager.service`
