@@ -75,9 +75,10 @@ Enter custom values for CAPITALIZED letters
 
 ### After Install
 *Essential Utilites*  
-`pacman -S bluez bluez-utils cups git ntfs-3g intel-ucode`  
+`pacman -S bluez bluez-utils cups git ntfs-3g intel-ucode system-config-printer gutenprint4`    
 `systemctl enable NetworkManager.service`  
-`systemctl enable bluetooth.service`
+`systemctl enable bluetooth.service`  
+`systemctl enable org.cups.cupsd.service`  
 
 *Installing yay aur-helper*  
 `su USER`  
