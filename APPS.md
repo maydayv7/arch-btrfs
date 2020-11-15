@@ -23,5 +23,5 @@ Evolution
 Etcher  
 Transmission  
 Gthumb  
-Kdenlive  
+Openshot    
 Apostrophe
