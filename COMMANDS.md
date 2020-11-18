@@ -2,7 +2,7 @@
 ## Arch
 #### GRUB
 *The update-grub script:*  
-*Add the following in* ***/usr/sbin/update-grub***  
+*Add the following in* **/usr/sbin/update-grub**  
 
 ***#!/bin/sh***   
 ***set -e***  
