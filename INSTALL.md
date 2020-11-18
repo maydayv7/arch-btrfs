@@ -3,7 +3,7 @@ Enter custom values for THESE letters
 *These* letters and ***these*** letters are comments  
 
 ### Create live disk
-Go to [this](https://www.archlinux.org/download/) website and download the latest .iso file. Then either burn it to a USB using Etcher ([Download](https://www.balena.io/etcher/)) or burn it to a CD or DVD using Brasero ([Download](https://wiki.gnome.org/Apps/Brasero)). Make sure that the size of the device is at least 1 GB
+Go to [this](https://www.archlinux.org/download/) website and download the latest .iso file. Then either burn it to a USB using [Etcher](https://www.balena.io/etcher/) or burn it to a CD or DVD using [Brasero](https://wiki.gnome.org/Apps/Brasero). Make sure that the size of the device is at least 1 GB
 
 ### Network
 *Replace* ***DEVICE*** *with the name of the device found from device list*  
