@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+# My PC Config
+# My PC Config
 
-You can use the [editor on GitHub](https://github.com/maydayv7/arch-btrfs/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Distro
+My distro of choice is Arch due to it's expansive and informative wiki and it's bleeding edge repos, and Windows on dualboot. I use GNOME primarily as my desktop environment, as I like it's workflow and, occassionally use KDE as my bling-bling DE :)  
+See [INSTALL.md](https://github.com/maydayv7/arch-btrfs/blob/main/INSTALL.md) for installation instructions on how to install Arch on a Timeshift-compatible BTRFS partition
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Apps
+##### Linux
+See [APPS.md](https://github.com/maydayv7/arch-btrfs/blob/main/APPS.md) for the list of essential apps that I always install on any distro
 
-### Markdown
+##### Windows
+See [WINDOWS.md](https://github.com/maydayv7/arch-btrfs/blob/main/WINDOWS.md) for the list of must-use Windows apps I always install
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Useful Commands
+See [COMMANDS.md](https://github.com/maydayv7/arch-btrfs/blob/main/COMMANDS.md) for some useful and important commands in various distros
 
-```markdown
-Syntax highlighted code block
+### GNOME Extensions
+See [EXTENSIONS.md](https://github.com/maydayv7/arch-btrfs/blob/main/EXTENSIONS.md) for the list of my favorite gnome-shell extensions, compatible with the latest GNOME release
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/maydayv7/arch-btrfs/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Appearance
+See [APPEARANCE.md](https://github.com/maydayv7/arch-btrfs/blob/main/APPEARANCE.md) for the list of the greatest app and icon themes  
+See the [CONFIG](https://github.com/maydayv7/arch-btrfs/blob/main/CONFIG/) folder for my ZSH config
