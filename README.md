@@ -1,4 +1,4 @@
-# My Linux PC Config
+# My PC Config
 
 ### Distro
 My distro of choice is Arch due to it's expansive and informative wiki and it's bleeding edge repos, and Windows on dualboot. I use GNOME primarily as my desktop environment, as I like it's workflow and, occassionally use KDE as my bling-bling DE :)  
