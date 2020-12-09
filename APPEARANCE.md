@@ -1,12 +1,22 @@
 # Themes
 ### GTK Theme
-Layan  
-Flat Remix  
+* Layan
+* Yaru Colors
+* WhiteSur
+* Vimix
+* Materia
+* Qogir
+* Matcha
 
 ### KDE Theme
-Otto  
-Moe  
+* Otto
+* Moe
 
 ### Icon Theme
-Papirus  
-Mojave-Circle
+* Papirus
+* McMojave-Circle
+* Paper
+
+### GRUB Theme
+* Poly Dark
+* Vimix

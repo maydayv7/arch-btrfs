@@ -24,4 +24,15 @@
 `sudo ntfsfix /dev/sdXY`  
 
 *Create symlinks for home directories (Useful for multiboot)*  
-`ln -s /path/to/HOME_DIR/on/other/partition ~/HOME_DIR`
+`ln -s /path/to/HOME_DIR/on/other/partition ~/HOME_DIR`  
+
+*If a home directory got deleted or if you want a custom home directory, modify this file*  
+`nano ~/.config/user-dirs.dirs`
+
+*How I mount my data partition*  
+`sudo mkdir /data`
+`sudo chmod ugo+rw /data`
+```# /dev/sda4 LABEL=Files
+UUID="01D6C4B0D2F973E0"                         /data           ntfs            defaults,rw,uid=1000            0 0```
+
+

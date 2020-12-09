@@ -100,10 +100,10 @@ Go to [this](https://www.archlinux.org/download/) website and download the lates
 
 ### After Install
 #### Essential Utilites
-`pacman -S bluez bluez-utils cups git ntfs-3g intel-ucode system-config-printer`    
+`pacman -S bluez bluez-utils cups git ntfs-3g intel-ucode system-config-printer`  
 `systemctl enable NetworkManager.service`  
 `systemctl enable bluetooth.service`  
-`systemctl enable org.cups.cupsd.service`  
+`systemctl enable cups`  
 
 *Installing yay aur-helper (Optional)*  
 `su USER`  
