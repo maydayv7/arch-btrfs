@@ -5,10 +5,10 @@ My distro of choice is Arch due to it's expansive and informative wiki and it's 
 See [INSTALL.md](https://github.com/maydayv7/arch-btrfs/blob/main/INSTALL.md) for installation instructions on how to install Arch on a Timeshift-compatible BTRFS partition
 
 ### Apps
-#### Linux
+##### Linux
 See [APPS.md](https://github.com/maydayv7/arch-btrfs/blob/main/APPS.md) for the list of essential apps that I always install on any distro
 
-#### Windows
+##### Windows
 See [WINDOWS.md](https://github.com/maydayv7/arch-btrfs/blob/main/WINDOWS.md) for the list of must-use Windows apps I always install
 
 ### Useful Commands
